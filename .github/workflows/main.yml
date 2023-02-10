@@ -23,7 +23,7 @@ jobs:
           dotnet-version: '7.0.x'
           
       - name: Restore
-        run: dotnet restore ./CurrentTimeService.sln
+        run: dotnet restore ./CICDTest.sln
         
       - name: Build
-        run: dotnet build ./CurrentTimeService.sln --configuration Release --no-restore
+        run: dotnet build ./CICDTest.sln --configuration Release --no-restore
