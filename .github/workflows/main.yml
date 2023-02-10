@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - master
+    - main
 
 env:
   AZURE_WEBAPP_NAME: cicdshehzad
@@ -27,9 +27,9 @@ jobs:
         
       - name: Build
         run: dotnet build ./CICDTest.sln --configuration Release --no-restore
-
-     - name: Publish
-        run: dotnet publish ./CurrentTimeService.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+        
+      - name: Publish
+        run: dotnet publish ./CICDTest.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
         
       - name: Deployment
         uses: azure/webapps-deploy@v2
