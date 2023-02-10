@@ -12,7 +12,7 @@ app.UseHttpsRedirection();
 app.MapGet("/weatherforecast", () =>
 {
     
-    return "Farrukh CICD";
+    return "Farrukh CICD 2";
 });
 
 app.Run();
