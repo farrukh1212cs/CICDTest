@@ -12,7 +12,7 @@ app.UseHttpsRedirection();
 app.MapGet("/weatherforecast", () =>
 {
     
-    return "Shahzad Bhatti";
+    return "Sami khan";
 });
 
 app.Run();
